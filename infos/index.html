@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./mainBarStyle.css">
+    <title>GordãoPedia</title>
+</head>
+<body>
+    <header id="header">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="menu-bar"><rect width="24" height="24" fill="none"></rect><path d="M18.2,12.7H5.8C5.3,12.7,5,12.4,5,12s0.3-0.7,0.7-0.7h12.5c0.4,0,0.7,0.3,0.7,0.7S18.7,12.7,18.2,12.7z M19,7.8
+            C19,7.3,18.7,7,18.3,7H5.8C5.3,7,5,7.4,5,7.8s0.3,0.7,0.7,0.7h12.5C18.7,8.5,19,8.2,19,7.8z M19,16.2c0-0.4-0.3-0.7-0.7-0.7H5.8
+            c-0.4,0-0.7,0.3-0.7,0.7C5,16.6,5.4,17,5.8,17h12.5C18.7,17,19,16.7,19,16.2z"></path></svg>
+        <a href="../index.html">
+            <h1>gordãopedia</h1>
+            <h2>counter-strike</h2>
+        </a>
+        <p>Wiki do Gordão</p>
+    </header>
+
+    <div id="navbar">
+        <a href="../campeonatos/index.html">Campeonatos</a>
+        <a href="../equipes/index.html" style="font-weight: 700 !important;">Equipes</a>
+        <a href="../jogadores/index.html">Jogadores</a>
+        <a href="../infos/index.html">Infos</a>
+    </div>
+
+    <main>
+        <div id="sidebar">
+            <div id="firstDiv" style="position: sticky; top: 10px;">
+            </div>
+            <div id="secondDiv" style="position: sticky; top: 90px;">
+                <a href="../campeonatos/index.html">Campeonatos</a>
+                <a href="../equipes/index.html"  style="font-weight: 700 !important;">Equipes</a>
+                <a href="../jogadores/index.html">Jogadores</a>
+                <a href="../infos/index.html">Infos</a>
+            </div>
+        </div>
+
+        <div id="listra" style="width: 20px; background-color: #534D3A;"></div>
+
+        <div id="mainbar">
+            <h1>Infos</h1>
+            <p>Nesta aba, você pode encontrar informações úteis para a wiki e para o CS.</p>
+            <br>
+            <h2 id="lan">Criar e Conectar em uma partida LAN</h2>
+            <p>coming soon</p>
+            <br>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Atualizado em 29/09/2023</p>
+        <div id="footerWrapper">
+            <a href="../index.html">gordãopedia</a>
+            <div>
+                <a href="../comingsoon.html">Contate-nos</a>
+                <a href="https://github.com/FeMartins50">Dev</a>
+            </div>
+        </div>
+        <p>Licença daquele trem lá. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        menu_bar = document.getElementById("menu-bar");
+        navbar = document.getElementById("navbar");
+        isNavbarOn = false;
+        menu_bar.onclick = () => {
+            if (isNavbarOn) {
+                navbar.style.top = "-100%";
+                isNavbarOn = false;
+            } else {
+                headerHeight = window.getComputedStyle(document.getElementById("header")).height;
+                console.log(headerHeight);
+                navbar.style.top = headerHeight;
+                isNavbarOn = true;
+            }
+            console.log("click " + isNavbarOn);
+        }
+    </script>
+</body>
+</html>
