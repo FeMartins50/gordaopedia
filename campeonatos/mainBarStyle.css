@@ -1,6 +1,7 @@
 #mainbar {
-    margin: 20px 20px;
-    width: 1091px;
+    margin: 20px 40px;
+    flex-grow: 1; /* Fill remaining space */
+    min-width: 0; /* Don't use more space than available */
     display: flex;
     flex-flow: column;
 
@@ -16,7 +17,7 @@
     line-height: normal;
 }
 #mainbar p {
-    text-align: center;
+    text-align: justify;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -29,14 +30,139 @@
     font-weight: 500;
     line-height: normal;
 }
+#mainbar h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#mainbar h4 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 #mainbar ul {
-    list-style: none;
+    padding: 0 40px;
 }
 #mainbar li {
     font-size: 20px;
     padding: 5px;
 }
-@media (width < 850px) {
+#mainbar a:link{
+    color: rgb(168, 174, 211) !important;
+    text-decoration: underline;
+}
+
+#mainbar .jogo {
+    width: 90%;
+    background: #6D4C39;
+    padding: 30px 30px;
+    border-radius: 40px;
+    margin: 15px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#mainbar .jogo .times {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#mainbar .jogo .numeros {
+    flex: 0.7;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#mainbar .jogo p {
+    font-family: Azeret Mono;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#mainbar .jogo svg {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+}
+
+
+#mainbar .mapa {
+    background: #6D4C39;
+    padding: 18px 30px;
+    border-radius: 40px;
+    margin: 15px;
+    width: 70%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#mainbar .mapa .times {
+    flex: 1;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#mainbar .mapa .titulo {
+    flex: 1.7;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#mainbar .mapa .numeros {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#mainbar .mapa p {
+    font-family: Azeret Mono;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#mainbar .mapa svg {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+@media (width < 1020px) {
+    #mainbar h3 {
+        font-size: 16px;
+    }
+    #mainbar h4 {
+        font-size: 13px;
+    }
+    #mainbar .jogo svg {
+        width: 134px;
+        height: 134px;
+    }
+    #mainbar .mapa svg {
+        width: 27px;
+        height: 27px;
+    }
+    #mainbar .jogo p {
+        font-size: 32px;
+    }
+    #mainbar .mapa p {
+        font-size: 32px;
+    }
+}
+@media (width < 890px) {
     #mainbar {
         margin: 15px 15px;
     }
@@ -51,6 +177,35 @@
     }
     #mainbar li {
         font-size: 17px;
+    }
+
+    #mainbar h3 {
+        font-size: 13px;
+    }
+    #mainbar h4 {
+        font-size: 11px;
+    }
+    #mainbar .jogo {
+        width: 100%;
+        padding: 15px 20px;
+    }
+    #mainbar .mapa {
+        width: 90%;
+        padding: 15px 20px;
+    }
+    #mainbar .jogo svg {
+        width: 100px;
+        height: 100px;
+    }
+    #mainbar .mapa svg {
+        width: 22px;
+        height: 22px;
+    }
+    #mainbar .jogo p {
+        font-size: 24px;
+    }
+    #mainbar .mapa p {
+        font-size: 24px;
     }
 }
 @media (width < 700px) {
@@ -68,5 +223,49 @@
     }
     #mainbar li {
         font-size: 13px;
+    }
+}
+@media (width < 420px) {
+    #mainbar {
+        margin: 10px 10px;
+    }
+    #mainbar h1 {
+        font-size: 26px;
+    }
+    #mainbar p {
+        font-size: 12px;
+    }
+    #mainbar h2 {
+        font-size: 20px;
+    }
+    #mainbar li {
+        font-size: 12px;
+    }
+
+    #mainbar h3 {
+        font-size: 10px;
+    }
+    #mainbar h4 {
+        font-size: 9px;
+    }
+    #mainbar .jogo {
+        width: 100%;
+    }
+    #mainbar .mapa {
+        width: 90%
+    }
+    #mainbar .jogo svg {
+        width: 80px;
+        height: 80px;
+    }
+    #mainbar .mapa svg {
+        width: 22px;
+        height: 22px;
+    }
+    #mainbar .jogo p {
+        font-size: 24px;
+    }
+    #mainbar .mapa p {
+        font-size: 24px;
     }
 }
